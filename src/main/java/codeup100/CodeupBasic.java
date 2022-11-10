@@ -3,8 +3,6 @@ package codeup100;
 import java.util.Scanner;
 
 /*
-CodeUp 제출 형식
-
 public class Main{
     public static void main(String[] args){
 	}
@@ -13,7 +11,8 @@ public class Main{
 
 public class CodeupBasic {
 
-    public static void test(){
+    public static void test() {
+        {
 //        basic1001();
 //        basic1002();
 //        basic1003();
@@ -33,10 +32,100 @@ public class CodeupBasic {
 //        basic1018();
 //        basic1019();
 //        basic1020();
+
+//        basic1021();
+//        basic1022();
+//        basic1023();
+//        basic1024();
+//        basic1025();
+//        basic1026();
+//        basic1027();
+//        basic1028();
+//        basic1029();
+//        basic1030();
+        }
+    }
+
+    // 11. 10. 1021~1030
+    public static void basic1021(){
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.next();
+        System.out.println(str);
+    }
+
+    public static void basic1022(){
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        System.out.println(str);
+    }
+
+    public static void basic1023(){
+        Scanner scanner = new Scanner(System.in);
+        String[] str = Float.toString(scanner.nextFloat()).split("\\.");
+        System.out.println(str[0]+"\n"+str[1]);
+    }
+
+    public static void basic1024(){
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.next();
+
+        for(int i=0; i<str.length(); i++){
+            char c = str.charAt(i);
+            System.out.println("\'" + c + "\'");
+        }
+    }
+
+    public static void basic1025(){
+        Scanner scanner = new Scanner(System.in);
+        String x = Integer.toString(scanner.nextInt());
+
+        for(int i=x.length(); i > 0; i--){
+            // x 자리수 (x-x)번째 수 * 10의 x승 부터 출력
+            int y = x.charAt(x.length() - i) - '0';
+            int n = (int)Math.pow(10, i-1);
+            System.out.println("[" + y*n + "]");
+        }
+    }
+
+    public static void basic1026() {
+        Scanner scanner = new Scanner(System.in);
+        String minute = scanner.next().split(":")[1];
+
+        if (minute.charAt(0) == '0') {
+            System.out.println(minute.charAt(1));
+        } else System.out.println(minute);
+    }
+
+    public static void basic1027(){
+        Scanner scanner = new Scanner(System.in);
+        String[] date = scanner.next().split("\\.");
+        System.out.printf("%02d-%02d-%04d", Integer.parseInt(date[2]), Integer.parseInt(date[1]), Integer.parseInt(date[0]));
+    }
+
+    public static void basic1028(){
+        // int 범위: -2147483648 ~ 2147483647
+        Scanner scanner = new Scanner(System.in);
+        long l = scanner.nextLong();
+        System.out.println(l);
+
+//        if (l > 2147483647 ){
+//            long x = l % 2147483647;
+//            System.out.println(2147483647 + x);
+//        } else System.out.println(l);
+    }
+
+    public static void basic1029(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("%.11f", scanner.nextDouble());
+    }
+
+    public static void basic1030(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(scanner.nextLong());
     }
 
 
-    // 11. 8. 1011~1020
+    // 11. 8. 1011~1020n ,
     public static void basic1011() {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.next();
@@ -50,7 +139,7 @@ public class CodeupBasic {
         System.out.println(printOut);
     }
 
-    public static void basic1012(){
+    public static void basic1012() {
         Scanner floatScanner = new Scanner(System.in);
         float f = floatScanner.nextFloat();
         System.out.printf("%f%n", f);
@@ -79,7 +168,7 @@ public class CodeupBasic {
     public static void basic1017() {
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
-        System.out.printf("%d %d %d", i,i,i);
+        System.out.printf("%d %d %d", i, i, i);
     }
 
     public static void basic1018() {
@@ -112,21 +201,33 @@ public class CodeupBasic {
 
 
     // 11. 3. 1001~1010
-    public static void basic1001(){
+        public static void basic1001() {
         System.out.println("Hello");
     }
-    public static void basic1002() { System.out.println("Hello World"); }
-    public static void basic1003() { System.out.println("Hello\nWorld"); }
-    public static void basic1004() { System.out.println("\'Hello\'"); }
-    public static void basic1005() { System.out.println("\"Hello World\""); }
-    public static void basic1006() { System.out.printf("\"!@#$%%^&*()\"%n"); }
-    public static void basic1007() { System.out.println("\"C:\\Download\\hello.cpp\""); }
-    public static void basic1008() {
+        public static void basic1002() {
+        System.out.println("Hello World");
+    }
+        public static void basic1003() {
+        System.out.println("Hello\nWorld");
+    }
+        public static void basic1004() {
+        System.out.println("\'Hello\'");
+    }
+        public static void basic1005() {
+        System.out.println("\"Hello World\"");
+    }
+        public static void basic1006() {
+        System.out.printf("\"!@#$%%^&*()\"%n");
+    }
+        public static void basic1007() {
+        System.out.println("\"C:\\Download\\hello.cpp\"");
+    }
+        public static void basic1008() {
 //        System.out.printf("%c%c%c%n%c%c%c%n%c%c%c", '\u250C', '\u252C','\u2510','\u251C','\u253C','\u2524','\u2514', '\u2534','\u2518');
         System.out.printf("\u250C\u252C\u2510%n\u251C\u253C\u2524%n\u2514\u2534\u2518");
         System.out.printf("%n");
     }
-    public static void basic1010() {
+        public static void basic1010() {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
@@ -134,5 +235,4 @@ public class CodeupBasic {
 
         // 제출시 Scanner import 안해주면 컴파일 에러 발생
     }
-
 }
