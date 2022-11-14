@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 /*
 public class Main{
-    public static void main(String[] args){
-	}
+     public static void main(String[] args) {
+     }
 }
 */
 
@@ -43,8 +43,86 @@ public class CodeupBasic {
 //        basic1028();
 //        basic1029();
 //        basic1030();
+
+//        basic1031();
+//        basic1032();
+//        basic1033();
+//        basic1034();
+//        basic1035();
+//        basic1036();
+//        basic1036();
+//        basic1037();
+//        basic1038();
+//        basic1039();
+//        basic1040();
         }
     }
+
+    // 11. 14. 1031~1040
+    public static void basic1031() {
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt();
+        System.out.printf("%o", i);
+    }
+
+    public static void basic1032() {
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt();
+        System.out.printf("%x", i);
+    }
+
+    public static void basic1033() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(Integer.toHexString(scanner.nextInt()).toUpperCase());
+    }
+
+    public static void basic1034() {
+        // 8진수 -> 10진수
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(Integer.parseInt(scanner.nextLine(), 8));
+    }
+
+    public static void basic1035() {
+        Scanner scanner = new Scanner(System.in);
+        int i = Integer.parseInt(scanner.nextLine(), 16);
+        System.out.println(Integer.toOctalString(i));
+    }
+
+    public static void basic1036() {
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextLine().charAt(0);
+        System.out.println(i);
+    }
+
+    public static void basic1037() {
+        Scanner scanner = new Scanner(System.in);
+        char c = (char)scanner.nextInt();
+        System.out.println(c);
+    }
+
+
+    // int 계산시 결과값 오버플로우 걱정되면 무조건 업캐스팅 해주기
+    public static void basic1038() {
+        Scanner scanner = new Scanner(System.in);
+        String sc = scanner.nextLine();
+        long response = (long) Integer.parseInt(sc.split(" ")[0]) + (long) Integer.parseInt(sc.split(" ")[1]);
+        System.out.println(response);
+    }
+
+    public static void basic1039() {
+        Scanner scanner = new Scanner(System.in);
+        String sc = scanner.nextLine();
+        long l = Long.parseLong(sc.split(" ")[0]) + Long.parseLong(sc.split(" ")[1]);
+        System.out.println(l);
+    }
+
+    public static void basic1040() {
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt();
+        int changeSign = i < 0 ? -i : -i;
+        System.out.println(changeSign);
+    }
+
 
     // 11. 10. 1021~1030
     public static void basic1021(){
