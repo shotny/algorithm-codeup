@@ -55,8 +55,124 @@ public class CodeupBasic {
 //        basic1038();
 //        basic1039();
 //        basic1040();
+
+//        basic1041();
+//        basic1042();
+//        basic1043();
+//        basic1044();
+//        basic1045();
+//        basic1046();
+//        basic1047();
+//        basic1048();
+//        basic1049();
+//        basic1050();
+
+//        basic1051();
+//        basic1052();
+//        basic1053();
+//        basic1054();
+//        basic1055();
         }
     }
+
+    // 11. 15. 1041~1055
+    public static void basic1041() {
+        Scanner scanner = new Scanner(System.in);
+        int before = scanner.next().charAt(0);
+        char after = (char)(before + 1);
+        System.out.println(after);
+    }
+    public static void basic1042() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.println(a/b);
+    }
+    public static void basic1043() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.println(a%b);
+    }
+    public static void basic1044() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        long result = (long)a + 1;
+        System.out.println(result);
+    }
+    public static void basic1045() {
+        Scanner scanner = new Scanner(System.in);
+        long a = scanner.nextInt();
+        long b = scanner.nextInt();
+
+        System.out.printf((a+b) + "\n" + (a-b) + "\n" + (a*b) + "\n" + (a/b) + "\n" + (a%b) + "\n" + "%.2f", (float)a/b);
+    }
+    public static void basic1046() {
+        Scanner scanner = new Scanner(System.in);
+        long a = scanner.nextInt();
+        long b = scanner.nextInt();
+        long c = scanner.nextInt();
+
+        long sum = a + b + c;
+        float average = sum/(float)3;
+        System.out.printf("%d%n%.1f", sum, average);
+    }
+
+    // 비트시프트 연산
+    public static void basic1047() {
+        Scanner scanner = new Scanner(System.in);
+        long a = scanner.nextInt();
+        System.out.println(a<<1);
+    }
+    public static void basic1048() {
+        Scanner scanner = new Scanner(System.in);
+        long a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.println(a<<b);
+    }
+    public static void basic1049() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.printf("%d", a > b ? 1 : 0);
+    }
+    public static void basic1050() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.printf("%d", a == b ? 1 : 0);
+    }
+
+    public static void basic1051() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.printf("%d", b >= a ? 1 : 0);
+    }
+    public static void basic1052() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.printf("%d", a != b ? 1 : 0);
+    }
+    public static void basic1053() {
+        Scanner scanner = new Scanner(System.in);
+        int value = scanner.nextInt();
+        System.out.printf("%d", value == 1 ? 0 : 1);
+    }
+    public static void basic1054() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.printf("%d", (a == 1 && b == 1) ? 1 : 0);
+    }
+    public static void basic1055() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.printf("%d", a == 1 || b == 1 ? 1 : 0);
+    }
+
 
     // 11. 14. 1031~1040
     public static void basic1031() {
