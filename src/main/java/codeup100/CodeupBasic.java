@@ -72,7 +72,47 @@ public class CodeupBasic {
 //        basic1053();
 //        basic1054();
 //        basic1055();
+
+//        basic1056();
+//        basic1057();
+//        basic1058();
+//        basic1059();
+//        basic1060();
         }
+    }
+
+    // 11. 16. 1056~1060
+    public static void basic1056() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.printf("%d", a != b ? 1 : 0);
+    }
+    public static void basic1057() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.printf("%d", a == b ? 1 : 0);
+    }
+    public static void basic1058() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.printf("%d", a==0 && b==0 ? 1 : 0);
+    }
+
+    // 비트단위 연산
+    public static void basic1059() {
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt();
+        System.out.println(~i);
+    }
+
+    public static void basic1060() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.println(a&b);
     }
 
     // 11. 15. 1041~1055
