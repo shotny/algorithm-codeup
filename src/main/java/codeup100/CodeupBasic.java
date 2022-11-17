@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 /*
 public class Main{
-     public static void main(String[] args) {
-     }
+    public static void main(String[] args) {
+    }
 }
 */
 
@@ -78,7 +78,257 @@ public class CodeupBasic {
 //        basic1058();
 //        basic1059();
 //        basic1060();
+
+//        basic1061();
+//        basic1062();
+//        basic1063();
+//        basic1064();
+//        basic1065();
+//        basic1066();
+//        basic1067();
+//        basic1068();
+//        basic1069();
+//        basic1070();
+//        basic1071();
+//        basic1072();
+//        basic1073();
+//        basic1074();
+//        basic1075();
+//        basic1076();
+//        basic1077();
+//        basic1078();
+//        basic1079();
+//        basic1080();
         }
+    }
+
+//    11.17. 1061 ~ 1080
+    public static void basic1061() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.println(a|b);
+    }
+    public static void basic1062() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.println(a^b);
+    }
+
+    //3항 연산자 사용하기
+    public static void basic1063() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.printf("%d", a > b ? a : b);
+    }
+    public static void basic1064() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        System.out.printf("%d", (a<b ? a:b)<c? (a<b ? a:b):c);
+    }
+    public static void basic1065() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        if(a%2 == 0){
+            System.out.println(a);
+        }
+        if(b%2 == 0){
+            System.out.println(b);
+        }
+        if(c%2 == 0){
+            System.out.println(c);
+        }
+    }
+    public static void basic1066() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        if(a%2 == 0) {
+            System.out.println("even");
+        } else {
+            System.out.println("odd");
+        }
+        if(b%2 == 0) {
+            System.out.println("even");
+        } else {
+            System.out.println("odd");
+        }
+        if(c%2 == 0) {
+            System.out.println("even");
+        } else {
+            System.out.println("odd");
+        }
+    }
+    public static void basic1067() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        if (a > 0) {
+            System.out.println("plus");
+            if (a % 2 == 0) {
+                System.out.println("even");
+            } else {
+                System.out.println("odd");
+            }
+        } else {
+            System.out.println("minus");
+            if (a % 2 == 0) {
+                System.out.println("even");
+            } else {
+                System.out.println("odd");
+            }
+        }
+    }
+    public static void basic1068() {
+        Scanner scanner = new Scanner(System.in);
+        int score = scanner.nextInt();
+        if(score >= 90 & score <= 100){
+            System.out.println("A");
+        } else if (score >= 70) {
+            System.out.println("B");
+        } else if (score >= 40 ) {
+            System.out.println("C");
+        } else System.out.println("D");
+    }
+    public static void basic1069() {
+        Scanner scanner = new Scanner(System.in);
+        char grade = scanner.next().charAt(0);
+        switch (grade) {
+            case 'A' :
+                System.out.println("best!!!");
+                break;
+            case 'B' :
+                System.out.println("good!!");
+                break;
+            case 'C':
+                System.out.println("run!");
+                break;
+            case 'D':
+                System.out.println("slowly~");
+                break;
+            default:
+                System.out.println("what?");
+        }
+    }
+    public static void basic1070() {
+        Scanner scanner = new Scanner(System.in);
+        int season = scanner.nextInt();
+
+        switch (season) {
+            case 12: case 1: case 2:
+                System.out.println("winter");
+                break;
+            case 3: case 4: case 5:
+                System.out.println("spring");
+                break;
+            case 6: case 7: case 8:
+                System.out.println("summer");
+                break;
+            default:
+                System.out.println("fall");
+        }
+    }
+    public static void basic1071() {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            int a = scanner.nextInt();
+            if(a == 0){ break; }
+            System.out.println(a);
+        }
+    }
+    public static void basic1072() {
+        Scanner scanner = new Scanner(System.in);
+        int count = scanner.nextInt();
+        for (int i = 0; i < count; i++) {
+            System.out.println(scanner.nextInt());
+        }
+    }
+    public static void basic1073() {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            int a = scanner.nextInt();
+            if(a == 0){ break; }
+            System.out.println(a);
+        }
+    }
+    public static void basic1074() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        while (a>0){
+            System.out.println(a);
+            a -= 1;
+        }
+    }
+    public static void basic1075() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        while (a != 0) {
+            a -= 1;
+            System.out.println(a);
+        }
+    }
+    public static void basic1076() {
+        Scanner scanner = new Scanner(System.in);
+        char alphabet = scanner.next().charAt(0);
+        char a = 'a';
+
+        while (a <= alphabet) {
+            System.out.println(a);
+            a += 1;
+        }
+    }
+    public static void basic1077() {
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt();
+        int zero = 0;
+        while (zero <= i) {
+            System.out.println(zero);
+            zero += 1;
+        }
+    }
+    public static void basic1078() {
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt();
+        int one = 1;
+        int sum = 0;
+        while (one <= i) {
+            if (one % 2 == 0) {
+                sum = sum + one;
+            }
+            one+=1;
+        }
+        System.out.println(sum);
+    }
+    public static void basic1079() {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true){
+            char c = scanner.next().charAt(0);
+            if (c == 'q') {
+                System.out.println(c);
+                break;
+            }
+            System.out.println(c);
+        }
+    }
+    public static void basic1080() {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        int i = 0;
+        int sum = 0;
+
+        while (sum < number) {
+            i++;
+            sum += i;
+        }
+        System.out.println(i);
     }
 
     // 11. 16. 1056~1060
@@ -107,7 +357,6 @@ public class CodeupBasic {
         int i = scanner.nextInt();
         System.out.println(~i);
     }
-
     public static void basic1060() {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
@@ -182,7 +431,6 @@ public class CodeupBasic {
         int b = scanner.nextInt();
         System.out.printf("%d", a == b ? 1 : 0);
     }
-
     public static void basic1051() {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
@@ -220,58 +468,49 @@ public class CodeupBasic {
         int i = scanner.nextInt();
         System.out.printf("%o", i);
     }
-
     public static void basic1032() {
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
         System.out.printf("%x", i);
     }
-
     public static void basic1033() {
         Scanner scanner = new Scanner(System.in);
         System.out.println(Integer.toHexString(scanner.nextInt()).toUpperCase());
     }
-
     public static void basic1034() {
         // 8진수 -> 10진수
         Scanner scanner = new Scanner(System.in);
         System.out.println(Integer.parseInt(scanner.nextLine(), 8));
     }
-
     public static void basic1035() {
         Scanner scanner = new Scanner(System.in);
         int i = Integer.parseInt(scanner.nextLine(), 16);
         System.out.println(Integer.toOctalString(i));
     }
-
     public static void basic1036() {
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextLine().charAt(0);
         System.out.println(i);
     }
-
     public static void basic1037() {
         Scanner scanner = new Scanner(System.in);
         char c = (char)scanner.nextInt();
         System.out.println(c);
     }
 
-
-    // int 계산시 결과값 오버플로우 걱정되면 무조건 업캐스팅 해주기
+    // int 계산시 결과값 오버플로우가 되지 않게 업캐스팅 해줘야함
     public static void basic1038() {
         Scanner scanner = new Scanner(System.in);
         String sc = scanner.nextLine();
         long response = (long) Integer.parseInt(sc.split(" ")[0]) + (long) Integer.parseInt(sc.split(" ")[1]);
         System.out.println(response);
     }
-
     public static void basic1039() {
         Scanner scanner = new Scanner(System.in);
         String sc = scanner.nextLine();
         long l = Long.parseLong(sc.split(" ")[0]) + Long.parseLong(sc.split(" ")[1]);
         System.out.println(l);
     }
-
     public static void basic1040() {
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
@@ -286,19 +525,16 @@ public class CodeupBasic {
         String str = scanner.next();
         System.out.println(str);
     }
-
     public static void basic1022(){
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
         System.out.println(str);
     }
-
     public static void basic1023(){
         Scanner scanner = new Scanner(System.in);
         String[] str = Float.toString(scanner.nextFloat()).split("\\.");
         System.out.println(str[0]+"\n"+str[1]);
     }
-
     public static void basic1024(){
         Scanner scanner = new Scanner(System.in);
         String str = scanner.next();
@@ -308,7 +544,6 @@ public class CodeupBasic {
             System.out.println("\'" + c + "\'");
         }
     }
-
     public static void basic1025(){
         Scanner scanner = new Scanner(System.in);
         String x = Integer.toString(scanner.nextInt());
@@ -320,7 +555,6 @@ public class CodeupBasic {
             System.out.println("[" + y*n + "]");
         }
     }
-
     public static void basic1026() {
         Scanner scanner = new Scanner(System.in);
         String minute = scanner.next().split(":")[1];
@@ -329,13 +563,11 @@ public class CodeupBasic {
             System.out.println(minute.charAt(1));
         } else System.out.println(minute);
     }
-
     public static void basic1027(){
         Scanner scanner = new Scanner(System.in);
         String[] date = scanner.next().split("\\.");
         System.out.printf("%02d-%02d-%04d", Integer.parseInt(date[2]), Integer.parseInt(date[1]), Integer.parseInt(date[0]));
     }
-
     public static void basic1028(){
         // int 범위: -2147483648 ~ 2147483647
         Scanner scanner = new Scanner(System.in);
@@ -347,12 +579,10 @@ public class CodeupBasic {
 //            System.out.println(2147483647 + x);
 //        } else System.out.println(l);
     }
-
     public static void basic1029(){
         Scanner scanner = new Scanner(System.in);
         System.out.printf("%.11f", scanner.nextDouble());
     }
-
     public static void basic1030(){
         Scanner scanner = new Scanner(System.in);
         System.out.println(scanner.nextLong());
@@ -372,39 +602,33 @@ public class CodeupBasic {
         char printOut = input.charAt(0);
         System.out.println(printOut);
     }
-
     public static void basic1012() {
         Scanner floatScanner = new Scanner(System.in);
         float f = floatScanner.nextFloat();
         System.out.printf("%f%n", f);
     }
-
     public static void basic1013() {
         Scanner scanner = new Scanner(System.in);
         int i1 = scanner.nextInt();
         int i2 = scanner.nextInt();
         System.out.printf("%d %d%n", i1, i2);
     }
-
     public static void basic1014() {
         Scanner scanner = new Scanner(System.in);
         char c1 = scanner.next().charAt(0);
         char c2 = scanner.next().charAt(0);
         System.out.printf("%c %c", c2, c1);
     }
-
     public static void basic1015() {
         Scanner scanner = new Scanner(System.in);
         float f = scanner.nextFloat();
         System.out.printf("%.2f", f);
     }
-
     public static void basic1017() {
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
         System.out.printf("%d %d %d", i, i, i);
     }
-
     public static void basic1018() {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.next();
@@ -413,7 +637,6 @@ public class CodeupBasic {
 //        System.out.println(s);
         System.out.printf("%s:%s%n", s1, s2);
     }
-
     public static void basic1019() {
         Scanner scanner = new Scanner(System.in);
         String str = scanner.next();
@@ -423,7 +646,6 @@ public class CodeupBasic {
 
         System.out.printf("%04d.%02d.%02d", year, month, day);
     }
-
     public static void basic1020() {
         Scanner scanner = new Scanner(System.in);
         String str = scanner.next();
@@ -435,36 +657,35 @@ public class CodeupBasic {
 
 
     // 11. 3. 1001~1010
-        public static void basic1001() {
+    public static void basic1001() {
         System.out.println("Hello");
     }
-        public static void basic1002() {
+    public static void basic1002() {
         System.out.println("Hello World");
     }
-        public static void basic1003() {
+    public static void basic1003() {
         System.out.println("Hello\nWorld");
     }
-        public static void basic1004() {
+    public static void basic1004() {
         System.out.println("\'Hello\'");
     }
-        public static void basic1005() {
+    public static void basic1005() {
         System.out.println("\"Hello World\"");
     }
-        public static void basic1006() {
+    public static void basic1006() {
         System.out.printf("\"!@#$%%^&*()\"%n");
     }
-        public static void basic1007() {
+    public static void basic1007() {
         System.out.println("\"C:\\Download\\hello.cpp\"");
     }
-        public static void basic1008() {
+    public static void basic1008() {
 //        System.out.printf("%c%c%c%n%c%c%c%n%c%c%c", '\u250C', '\u252C','\u2510','\u251C','\u253C','\u2524','\u2514', '\u2534','\u2518');
         System.out.printf("\u250C\u252C\u2510%n\u251C\u253C\u2524%n\u2514\u2534\u2518");
         System.out.printf("%n");
     }
-        public static void basic1010() {
+    public static void basic1010() {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-
         System.out.println(n);
 
         // 제출시 Scanner import 안해주면 컴파일 에러 발생
