@@ -1,5 +1,6 @@
 package codeup100;
 
+import java.io.*;
 import java.util.Scanner;
 
 /*
@@ -12,7 +13,7 @@ public class Main{
 public class CodeupBasic {
 
     public static void test() {
-        {
+
 //        basic1001();
 //        basic1002();
 //        basic1003();
@@ -99,10 +100,88 @@ public class CodeupBasic {
 //        basic1078();
 //        basic1079();
 //        basic1080();
-        }
+//        basic1081();
+//        basic1082();
+//        basic1083();
+//        basic1084();
     }
 
-//    11.17. 1061 ~ 1080
+//    11. 18. 1081 ~ 1084
+    public static void basic1081() {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= m; j++) {
+                System.out.printf("%d %d%n",i,j);
+            }
+        }
+    }
+    public static void basic1082() {
+        Scanner scanner = new Scanner(System.in);
+        int hex = scanner.nextInt(16);  // n진수도 int로 받을 수 있다..
+        for (int i=1; i<16; i++){
+            System.out.printf("%X*%X=%X%n", hex, i, hex*i);
+        }
+    }
+    public static void basic1083() {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        for(int i=1; i<=number; i++){
+            if (i % 3 == 0) {
+                System.out.print("X");
+            } else { System.out.print(i); }
+            if(i != number){
+                System.out.print(" ");
+            }
+        }
+    }
+    public static void basic1084() {
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
+            String light = reader.readLine();
+
+            int red = Integer.parseInt(light.split(" ")[0]);
+            int blue = Integer.parseInt(light.split(" ")[1]);
+            int green = Integer.parseInt(light.split(" ")[2]);
+            int count = 0;
+
+            for (int i = 0; i < red; i++) {
+                for (int j = 0; j < green; j++) {
+                    for (int k = 0; k < blue; k++) {
+                        writer.write(i + " " + j + " " + k + "\n");
+                        count++;
+                    }
+                }
+            }
+            writer.write(String.valueOf(count));
+            writer.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        /* 시간초과
+        Scanner scanner = new Scanner(System.in);
+        int red = scanner.nextInt();
+        int green = scanner.nextInt();
+        int blue = scanner.nextInt();
+        int count = 0;
+
+        for (int i = 0; i < red; i++) {
+            for (int j = 0; j < green; j++) {
+                for (int k = 0; k < blue; k++) {
+                    System.out.printf("%d %d %d%n", i, j, k);
+                    count++;
+                }
+            }
+        }
+        System.out.println(count);
+         */
+    }
+
+//    11. 17. 1061 ~ 1080
     public static void basic1061() {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
