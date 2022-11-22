@@ -104,9 +104,25 @@ public class CodeupBasic {
 //        basic1082();
 //        basic1083();
 //        basic1084();
+//        basic1085();
+//        basic1086();
+        basic1087();
+//        basic1088();
+//        basic1089();
+//        basic1090();
+//        basic1091();
+//        basic1092();
+//        basic1093();
+//        basic1094();
+//        basic1095();
+//        basic1096();
+//        basic1097();
+//        basic1098();
+//        basic1098();
+//        basic1100();
+
     }
 
-//    11. 18. 1081 ~ 1084
     public static void basic1081() {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
@@ -181,7 +197,44 @@ public class CodeupBasic {
          */
     }
 
-//    11. 17. 1061 ~ 1080
+    //소리 파일의 저장 용량_1024KB(2의 10승) = 1MB
+    // 1mb = 1024kb = 1024*1024 byte = 1024*1024*8 bit
+    public static void basic1085() {
+        Scanner scanner = new Scanner(System.in);
+        int hz = scanner.nextInt();
+        int bit = scanner.nextInt();
+        int track = scanner.nextInt();
+        int second = scanner.nextInt();
+
+        long bitSize = (long)hz*bit*track*second;
+        float mbSize = bitSize/(float)(1024*1024*8);
+        System.out.println(bitSize);
+        System.out.printf("%.1f MB", mbSize);
+    }
+
+    // r,g,b 각 8비트씩 / 한 점은 총 24비트로 표현
+    public static void basic1086() {
+        Scanner scanner = new Scanner(System.in);
+        int w = scanner.nextInt();
+        int h = scanner.nextInt();
+        int b = scanner.nextInt();
+        float mbSize = (long)w*h*b/(float)(1024*1024*8);
+        System.out.printf("%.2f MB", mbSize);
+    }
+    public static void basic1087() {
+        Scanner scanner = new Scanner(System.in);
+    }
+    public static void basic1088() {
+        Scanner scanner = new Scanner(System.in);
+    }
+    public static void basic1089() {
+        Scanner scanner = new Scanner(System.in);
+    }
+    public static void basic1090() {
+        Scanner scanner = new Scanner(System.in);
+    }
+
+//    11.17. 1061 ~ 1080
     public static void basic1061() {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
