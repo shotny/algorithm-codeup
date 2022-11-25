@@ -106,7 +106,7 @@ public class CodeupBasic {
 //        basic1084();
 //        basic1085();
 //        basic1086();
-        basic1087();
+//        basic1087();
 //        basic1088();
 //        basic1089();
 //        basic1090();
@@ -118,11 +118,284 @@ public class CodeupBasic {
 //        basic1096();
 //        basic1097();
 //        basic1098();
-//        basic1098();
-//        basic1100();
-
+//        basic1099();
     }
 
+//    11. 25. 1087~1099 기초100제 끝!
+    public static void basic1087() {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int sum = 0;
+
+        for (int i = 1; sum < n; i++) {
+            sum += i;
+        }
+        System.out.println(sum);
+    }
+    public static void basic1088() {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        for (int i = 1; i <= n; i++) {
+            if(i%3 != 0){
+                System.out.printf("%d ", i);
+            }
+        }
+    }
+    public static void basic1089() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int d = scanner.nextInt();
+        int n = scanner.nextInt();
+        System.out.println(a + d*(n-1));
+    }
+    public static void basic1090() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int r = scanner.nextInt();
+        int n = scanner.nextInt();
+        System.out.printf("%.0f", a*Math.pow(r, (n-1)));
+    }
+    public static void basic1091() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int m = scanner.nextInt();
+        int d = scanner.nextInt();
+        int n = scanner.nextInt();
+        long result = a;
+
+        for (int i = 1; i < n; i++) {
+            result = (result * m) + d;
+        }
+        System.out.println(result);
+    }
+    public static void basic1092() {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        int day =1;
+
+        while (day % a != 0 || day % b != 0 || day % c != 0) {
+            day++;
+        }
+        System.out.println(day);
+    }
+    public static void basic1093() {
+        Scanner scanner = new Scanner(System.in);
+        int times = scanner.nextInt();
+        int[] numList = new int[23];
+        for (int i = 1; i <= times; i++) {
+            int tmp = scanner.nextInt();
+            numList[tmp-1]++;
+        }
+        for (int j = 0; j < numList.length; j++) {
+            System.out.printf("%d ", numList[j]);
+        }
+    }
+    public static void basic1094() {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] a = new int[n];
+        for (int i = 1; i <= n; i++) {
+            a[n - i] = scanner.nextInt();
+        }
+        for (int j = 0; j < a.length; j++) {
+            System.out.printf("%d ", a[j]);
+        }
+    }
+    public static void basic1095() {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+
+        int tmp = scanner.nextInt();
+        for (int i = 1; i < n; i++) {
+            int now = scanner.nextInt();
+            if (now <= tmp) {
+                tmp = now;
+            }
+        }
+        System.out.println(tmp);
+    }
+    public static void basic1096() {
+        Scanner scanner = new Scanner(System.in);
+        int wTotal = scanner.nextInt();
+        int[][] board = new int[19][19];
+
+        for (int i = 1; i <= wTotal; i++) {
+            int x = scanner.nextInt();
+            int y = scanner.nextInt();
+            board[x-1][y-1]=1;
+        }
+
+        for (int j = 0; j < board.length; j++) {
+            for (int k = 0; k < board[j].length; k++) {
+                System.out.printf("%d ", board[j][k]);
+            }
+            System.out.println();
+        }
+    }
+    public static void basic1097() {
+        Scanner scanner = new Scanner(System.in);
+        int[][] board = new int[19][19];
+
+        // 바둑판 상황 입력받기
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                board[i][j] = scanner.nextInt();
+            }
+        }
+
+        // 십자뒤집기 좌표 개수
+        int n = scanner.nextInt();
+
+        // 입력된 좌표 개수만큼 순서대로 십자뒤집기
+        for (int k = 1; k <= n; k++) {
+            int x = scanner.nextInt();
+            int y = scanner.nextInt();
+
+            // 가로 뒤집기 _ 입력된 좌표가 아닌 경우만 뒤집음
+            for (int i = 0; i < 19; i++) {
+                if (i != y-1) {
+                    if (board[x - 1][i] == 1) {
+                        board[x-1][i] = 0;
+                    } else {
+                        board[x-1][i] = 1;
+                    }
+                }
+
+                // 세로 뒤집기 _ 입력된 좌표가 아닌 경우만 뒤집음
+                if (i != x - 1) {
+                    if (board[i][y - 1] == 1) {
+                        board[i][y-1] = 0;
+                    } else {
+                        board[i][y-1] = 1;
+                    }
+                }
+
+//                for (int j = 0; j < board.length; j++) {
+//                    if (j != x - 1) {
+//                        if (board[j][y - 1] == 1) {
+//                            board[j][y-1] = 0;
+//                        } else {
+//                            board[j][y-1] = 1;
+//                        }
+//                    }
+//                }
+            }
+            // 십자뒤집기 끝
+        }
+
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                System.out.printf("%d ", board[i][j]);
+            }
+            System.out.println();
+        }
+    }
+    public static void basic1098() {
+        Scanner scanner = new Scanner(System.in);
+        int boarH = scanner.nextInt();
+        int boarW = scanner.nextInt();
+        int[][] board = new int[boarH][boarW];
+
+        int sticks = scanner.nextInt();
+
+        for (int n = 1; n <= sticks; n++) {
+            int stickL = scanner.nextInt();
+            int direction = scanner.nextInt(); // 가로는 0 세로는 1
+            int x = scanner.nextInt();
+            int y = scanner.nextInt();
+
+            // 막대 길이만큼
+            for (int i=1; i<= stickL; i++){
+                // 가로 세로 방향에 따라 뒤집고 이동
+                if (direction == 0) {
+                    board[x-1][y-1] = 1;
+                    y += 1;
+                } else {
+                    board[x-1][y-1] = 1;
+                    x += 1;
+                }
+            }
+            // 막대 하나 가리기 끝
+        }
+
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                System.out.printf("%d ", board[i][j]);
+            }
+            System.out.println();
+        }
+    }
+    public static void basic1099() {
+        Scanner scanner = new Scanner(System.in);
+        int[][] maze = new int[10][10];
+
+        // 미로 지도 입력
+        for (int i = 0; i < maze.length; i++) {
+            for (int j = 0; j < maze[i].length; j++) {
+                maze[i][j] = scanner.nextInt();
+            }
+        }
+
+        // 현재위치 표시
+        int nowX = 1;
+        int nowY = 1;
+
+        // 길 탐색 시작 _ 오른쪽으로 먼저 감
+        while (maze[nowX][nowY] != 2) {
+            maze[nowX][nowY] = 9;
+            // 장애물 없으면 Go
+            if(maze[nowX][nowY+1] != 1){
+                nowY += 1;
+            } else if (maze[nowX+1][nowY] != 1) {
+                nowX += 1;
+            } else break;
+        }
+
+        // 먹이가 있어서(2에서) 멈췄다면 좌표찍기
+        if (maze[nowX][nowY] == 2) {
+            maze[nowX][nowY] = 9;
+        }
+
+        // 개미가 이동한 경로는~~
+        for (int i = 0; i < maze.length; i++) {
+            for (int j = 0; j < maze[i].length; j++) {
+                System.out.printf("%d ", maze[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+    //    11. 22. 1085 ~ 1086
+
+    //소리 파일의 저장 용량_1024KB(2의 10승) = 1MB
+    // 1mb = 1024kb = 1024*1024 byte = 1024*1024*8 bit
+    public static void basic1085() {
+        Scanner scanner = new Scanner(System.in);
+        int hz = scanner.nextInt();
+        int bit = scanner.nextInt();
+        int track = scanner.nextInt();
+        int second = scanner.nextInt();
+
+        long bitSize = (long)hz*bit*track*second;
+        float mbSize = bitSize/(float)(1024*1024*8);
+        System.out.println(bitSize);
+        System.out.printf("%.1f MB", mbSize);
+    }
+
+    // r,g,b 각 8비트씩 / 한 점은 총 24비트로 표현
+    public static void basic1086() {
+        Scanner scanner = new Scanner(System.in);
+        int w = scanner.nextInt();
+        int h = scanner.nextInt();
+        int b = scanner.nextInt();
+        float mbSize = (long)w*h*b/(float)(1024*1024*8);
+        System.out.printf("%.2f MB", mbSize);
+    }
+
+
+    //    11. 18. 1081 ~ 1084
     public static void basic1081() {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
@@ -197,42 +470,6 @@ public class CodeupBasic {
          */
     }
 
-    //소리 파일의 저장 용량_1024KB(2의 10승) = 1MB
-    // 1mb = 1024kb = 1024*1024 byte = 1024*1024*8 bit
-    public static void basic1085() {
-        Scanner scanner = new Scanner(System.in);
-        int hz = scanner.nextInt();
-        int bit = scanner.nextInt();
-        int track = scanner.nextInt();
-        int second = scanner.nextInt();
-
-        long bitSize = (long)hz*bit*track*second;
-        float mbSize = bitSize/(float)(1024*1024*8);
-        System.out.println(bitSize);
-        System.out.printf("%.1f MB", mbSize);
-    }
-
-    // r,g,b 각 8비트씩 / 한 점은 총 24비트로 표현
-    public static void basic1086() {
-        Scanner scanner = new Scanner(System.in);
-        int w = scanner.nextInt();
-        int h = scanner.nextInt();
-        int b = scanner.nextInt();
-        float mbSize = (long)w*h*b/(float)(1024*1024*8);
-        System.out.printf("%.2f MB", mbSize);
-    }
-    public static void basic1087() {
-        Scanner scanner = new Scanner(System.in);
-    }
-    public static void basic1088() {
-        Scanner scanner = new Scanner(System.in);
-    }
-    public static void basic1089() {
-        Scanner scanner = new Scanner(System.in);
-    }
-    public static void basic1090() {
-        Scanner scanner = new Scanner(System.in);
-    }
 
 //    11.17. 1061 ~ 1080
     public static void basic1061() {
@@ -664,7 +901,7 @@ public class CodeupBasic {
     }
     public static void basic1023(){
         Scanner scanner = new Scanner(System.in);
-        String[] str = Float.toString(scanner.nextFloat()).split("\\.");
+        String[] str = Double.toString(scanner.nextDouble()).split("\\.");
         System.out.println(str[0]+"\n"+str[1]);
     }
     public static void basic1024(){
