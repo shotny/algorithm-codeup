@@ -1,7 +1,7 @@
-import codeup100.CodeupBasic;
+import inflearn.InfSection1;
 
 public class AlgorithmStudyApplication {
     public static void main(String[] args){
-        CodeupBasic.test();
+        InfSection1.test();
     }
 }
