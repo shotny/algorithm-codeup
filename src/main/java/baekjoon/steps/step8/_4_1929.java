@@ -4,7 +4,43 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 public class _4_1929 {
+    // 소수가 되는 수의 배수를 지우면 남은 건 소수가 된다
+    public static boolean[] prime;
 
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(reader.readLine());
+
+        int startNum = Integer.parseInt(st.nextToken());
+        int endNum = Integer.parseInt(st.nextToken());
+        prime = new boolean[endNum + 1];
+
+        if (endNum == 1) {
+            return;
+        }
+
+        prime[0] = prime[1] = true;
+        getPrime(endNum);
+
+        for (int i = startNum; i <= endNum; i++) {
+            if(!prime[i]){
+                System.out.println(i);
+            }
+        }
+    }
+
+    public static void getPrime(int endNum) {
+        for (int i = 2; i*i <= endNum; i++) {
+            if (!prime[i]) {
+                for (int j = 2; i * j < prime.length; j++) {
+                    prime[i * j] = true; // i의 배수는 true -> 소수 아님
+                }
+            }
+        }
+    }
+
+
+    /*
     public static boolean[] primeNum;
 
     public static void main(String[] args) throws IOException {
@@ -38,8 +74,7 @@ public class _4_1929 {
                 primeNum[i * j] = true;
             }
         }
-    }
-
+    }*/
 
         /*int size = n - m + 1;
         boolean[] arr = new boolean[size];
