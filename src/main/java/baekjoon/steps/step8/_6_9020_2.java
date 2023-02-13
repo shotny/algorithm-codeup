@@ -21,7 +21,6 @@ public class _6_9020_2 {
         writer.close();
     }
 
-    // 소수 찾는 방법 1. boolean 타입 list 배열 이용
     private static boolean[] primeArr = new boolean[10001];
     private static boolean[] getPrimeArr() {
         for (int i = 2; i < primeArr.length; i++) {
@@ -30,6 +29,7 @@ public class _6_9020_2 {
 
         for (int i = 2; i < primeArr.length; i++) {
             if(primeArr[i] != false){
+
                 for (int j = 2; i * j < primeArr.length; j++) {
                     primeArr[i*j] = false;
                 }
@@ -39,33 +39,15 @@ public class _6_9020_2 {
     }
 
     private static int getPartition(int n) {
-        int x;
-
-        if (primeArr[n/2] == true) {
-            x = n - 2;
+        int x = n / 2;
+        if (primeArr[x] == true) {
         } else {
-            x = n / 2;
-            while (primeArr[x] != true && primeArr[n - x] != true) {
+            while (!(primeArr[x] == true && primeArr[n - x] == true)) {
                 x -= 1;
             }
         }
         return x;
     }
-
-    /*
-    private static Map<Integer, Integer> primeMap = new HashMap<>();
-    private static Map<Integer, Integer> getPrimeMap() {
-        getPrimeArr();
-        int count = 0;
-        for (int i = 2; i < primeArr.length; i++) {
-            if (primeArr[i] = true) {
-                ++count;
-                primeMap.put(count, i);
-            }
-        }
-        return primeMap;
-    }
-    */
 }
 
 // 짝수를 두 소수의 합으로 나타내는 표현을 그 수의 골드바흐 파티션이라고 한다.
