@@ -42,7 +42,6 @@ public class _6_9020_1 {
                 primes.add(i);
             }
         }
-
         return primes;
     }
 
