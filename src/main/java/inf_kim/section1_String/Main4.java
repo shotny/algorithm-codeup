@@ -15,13 +15,32 @@ public class Main4 {
         for (int i = 0; i < n; i++) {
             str[i] = scanner.next();
         }
-        for (String x : solution(n, str)) {
+        for (String x : solution1(n, str)) {
 
         }
 
     }
 
-    public static ArrayList<String> solution(int n, String[] str) {
+    public static ArrayList<String> solution2(int n, String[] strings) {
+        ArrayList<String> answer = new ArrayList<>();
+        for (String x : strings) {
+            char[] c = x.toCharArray();
+            int lt = 0, rt = x.length() - 1;
+            while (lt < rt) {
+                char tmp = c[lt];
+                c[lt] = c[rt];
+                c[rt] = tmp;
+
+                ++lt;
+                --rt;
+            }
+            String tmp = String.valueOf(c);
+            answer.add(tmp);
+        }
+        return answer;
+    }
+
+    public static ArrayList<String> solution1(int n, String[] str) {
         ArrayList<String> answer = new ArrayList<>();
 
         for (String x : str) {
