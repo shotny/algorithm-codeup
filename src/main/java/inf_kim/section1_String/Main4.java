@@ -10,15 +10,6 @@ public class Main4 {
         int n = Integer.parseInt(scanner.nextLine());
 
 //        solutionMy(n);
-
-        String[] str = new String[n];
-        for (int i = 0; i < n; i++) {
-            str[i] = scanner.next();
-        }
-        for (String x : solution1(n, str)) {
-
-        }
-
     }
 
     public static ArrayList<String> solution2(int n, String[] strings) {
