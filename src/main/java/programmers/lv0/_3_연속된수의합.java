@@ -6,51 +6,45 @@ public class _3_연속된수의합 {
 
     class Solution{
         public int[] solution(int num, int total) {
+            int startNum = 0;
+            int testSum;
 
-            /*
-            int[] answer = new int[num];
-            int sum = 0;
-            int count = 0;
-            int lastNum = 0;
-
-            for (int i = total / 2; sum <= total; i--) {
-                int tmp = i;
-                for (int j = 1; j<=num; j++) {
-                    sum += tmp;
-                    lastNum = tmp;
-                    --tmp;
-                }
-                if (sum == total) {
-                    for (int j = num - 1; j >= 0; j--) {
-                        answer[j] = lastNum;
-                        --lastNum;
-                    }
-                    break;
-                }
-
-                if (count == num && sum < total) {
-                    for (int j = total / 2; sum <= total; j++) {
-                        tmp = j;
-                        for (int k = 1; k <= num; k++) {
-                            sum += j;
-                            lastNum = j;
-                            ++tmp;
-                        }
-                        if (sum == total) {
-                            for (int k = 0; k < num; k++) {
-                                answer[k] = lastNum;
-                                ++lastNum;
-                            }
-                            break;
-                        }
-                    }
-                }
+            if (num / 2 == 0) {
+                startNum = total / num - (num / 2);
             }
 
-            for (int i = 0; i < num; i++) {
-                System.out.printf("%d, ", answer[i]);
-            }*/
+            if (total % num == 0) {
+                startNum = total / num - ((num - 1) / 2);
+            }
 
+            testSum = isRight(startNum, num);
+            while (testSum != total){
+                if (testSum < total) {
+                    ++startNum;
+                    testSum = isRight(startNum, num);
+                } else {
+                    --startNum;
+                    testSum = isRight(startNum, num);
+                }
+            }
+            return createArr(startNum, num);
+        }
+
+        public int isRight (int startNum, int num) {
+            int sum = 0;
+            for (int i = 0; i < num; i++) {
+                sum += startNum;
+                ++startNum;
+            }
+            return sum;
+        }
+
+        public int[] createArr(int startNum, int num) {
+            int[] answer = new int[num];
+            for (int i = 0; i < num; i++) {
+                answer[i] = startNum;
+                ++startNum;
+            }
             return answer;
         }
     }
