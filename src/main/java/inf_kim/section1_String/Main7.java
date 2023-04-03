@@ -5,8 +5,18 @@ import java.util.Scanner;
 //회문 문자열
 public class Main7 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine().toLowerCase();
+    }
+
+    public String solution(String str) {
+        String answer = "Yes";
+        String tmp = new StringBuilder(str).reverse().toString();
+        if (!str.equalsIgnoreCase(tmp)) {
+            answer = "No";
+        }
+        return answer;
+    }
+    public String solutionMy(String str) {
+        str = str.toLowerCase();
         String result = "YES";
 
         for (int i = 0; i < str.length()/2; i++) {
@@ -15,6 +25,6 @@ public class Main7 {
                 break;
             }
         }
-        System.out.println(result);
+        return result;
     }
 }
