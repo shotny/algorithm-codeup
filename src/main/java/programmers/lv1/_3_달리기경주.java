@@ -11,7 +11,7 @@ public class _3_달리기경주 {
         String[] callings = scanner.nextLine().split(" ");
 
         Solution s = new Solution();
-        String[] answer = s.solution1(players, callings);
+        String[] answer = s.solution(players, callings);
         for (String x : answer) {
             System.out.println(x);
         }
