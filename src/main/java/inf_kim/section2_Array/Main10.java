@@ -7,6 +7,7 @@ public class Main10 {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int[][] board = new int[n+2][n+2];
+        int answer = 0;
 
         // 가장자리 0으로 초기화
         for (int i = 0; i < n + 2; i++) {
@@ -19,15 +20,24 @@ public class Main10 {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 board[i][j] = scanner.nextInt();
+                System.out.printf("%d", board[i][j]);
             }
+            System.out.println();
         }
         scanner.close();
 
+        boolean isPeak = true;
         for (int i = 1; i <= n; i++) {
-            for (int j = 0; j <= n; j++) {
-                board[i][j] = scanner.nextInt();
+            for (int j = 1; j <= n; j++){
+                isPeak = true;
+                if (board[i][j] < board[i - 1][j] || board[i][j] < board[i + 1][j] || board[i][j] < board[i][j - 1] || board[i][j] < board[i][j + 1]) {
+                    isPeak = false;
+                }
+                if(isPeak){++answer;}
             }
         }
+
+        System.out.println(answer);
     }
 }
 // 상하좌우 네 번 비교
