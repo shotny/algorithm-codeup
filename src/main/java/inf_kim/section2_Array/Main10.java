@@ -20,9 +20,7 @@ public class Main10 {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 board[i][j] = scanner.nextInt();
-                System.out.printf("%d", board[i][j]);
             }
-            System.out.println();
         }
         scanner.close();
 
@@ -30,7 +28,7 @@ public class Main10 {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++){
                 isPeak = true;
-                if (board[i][j] < board[i - 1][j] || board[i][j] < board[i + 1][j] || board[i][j] < board[i][j - 1] || board[i][j] < board[i][j + 1]) {
+                if (board[i][j] <= board[i - 1][j] || board[i][j] <= board[i + 1][j] || board[i][j] <= board[i][j - 1] || board[i][j] <= board[i][j + 1]) {
                     isPeak = false;
                 }
                 if(isPeak){++answer;}
