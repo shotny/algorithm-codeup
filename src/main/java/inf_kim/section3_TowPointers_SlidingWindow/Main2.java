@@ -7,40 +7,39 @@ public class Main2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-//        int n = scanner.nextInt();
-//        ArrayList<Integer> a = new ArrayList<>(n);
-//        for (int i = 1; i <= n; i++) {
-//            a.add(scanner.nextInt());
-//        }
-//        int m = scanner.nextInt();
-//        ArrayList<Integer> b = new ArrayList<>(m);
-//        for (int i = 1; i <= m; i++) {
-//            b.add(scanner.nextInt());
-//        }
-
-
         int n = scanner.nextInt();
-        int[] a = new int[n];
-        for (int i = 0; i < n; i++) {
-            a[i] = scanner.nextInt();
+        ArrayList<Integer> a = new ArrayList<>(n);
+        for (int i = 1; i <= n; i++) {
+            a.add(scanner.nextInt());
         }
-
         int m = scanner.nextInt();
-        int[] b = new int[m];
-        for (int i = 0; i < m; i++) {
-            b[i] = scanner.nextInt();
+        ArrayList<Integer> b = new ArrayList<>(m);
+        for (int i = 1; i <= m; i++) {
+            b.add(scanner.nextInt());
         }
+        mySol(a, b);
 
-//        mySol(a, b);
-        infSol(n, m, a, b);
+//        int n = scanner.nextInt();
+//        int[] a = new int[n];
+//        for (int i = 0; i < n; i++) {
+//            a[i] = scanner.nextInt();
+//        }
+//
+//        int m = scanner.nextInt();
+//        int[] b = new int[m];
+//        for (int i = 0; i < m; i++) {
+//            b[i] = scanner.nextInt();
+//        }
+//        infSol(n, m, a, b);
     }
-
     public static void mySol(ArrayList<Integer> a, ArrayList<Integer> b) {
         ArrayList<Integer> answer = new ArrayList<>();
 
         for (int i = 0; i < a.size(); i++) {
             for (int j = 0; j < b.size(); j++) {
-                if (a.get(i) == b.get(j)) {
+                System.out.printf("a: %d , b: %d ",a.get(i), b.get(j));
+                System.out.println(a.get(i).equals(b.get(j)));
+                if (a.get(i).equals(b.get(j))) {
                     answer.add(b.get(j));
                     b.remove(b.get(j));
                     break;
