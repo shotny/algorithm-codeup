@@ -1,6 +1,6 @@
 package inf_kim.section3_TowPointers_SlidingWindow;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Main6 {
     public static void main(String[] args) {
@@ -11,12 +11,25 @@ public class Main6 {
         for (int i = 0; i < n; i++) {
             arr[i] = scanner.nextInt();
         }
-//        mySol(k, arr);
+        System.out.println(mySol(k, arr));
         System.out.println(infSol(k, arr));
     }
 
+    public static int infSol(int k, int[] arr) {
+        int answer = 0, cnt = 0, lt = 0;
+        for (int rt = 0; rt < arr.length; rt++) {
+            if(arr[rt] == 0){cnt++;}
+            while (cnt > k) {
+                if(arr[lt] == 0){cnt--;}
+                lt++;
+            }
+            answer = Math.max(answer, rt - lt + 1);
+        }
+        return answer;
+    }
+
     // 틀림
-    static void mySol(int k, int[] arr) {
+    static int mySol(int k, int[] arr) {
         int l = 0, r = 0, answer = 0, rtmp = 0, ltmp=0;
 
         while (r<arr.length){
@@ -41,21 +54,7 @@ public class Main6 {
                 }
             }
         }
-        System.out.println(answer);
-    }
-
-    static int infSol(int k, int[] arr) {
-        int answer = 0, cnt = 0, lt = 0;
-        for (int rt = 0; rt < arr.length; rt++) {
-            if(arr[rt] == 0){cnt++;}
-            while (cnt > k) {
-                if(arr[lt] == 0){
-                    cnt--;
-                    lt++;}
-            }
-            answer = Math.max(answer, rt - lt + 1);
-        }
-        return answer;
+        return answer ;
     }
 }
 // 1의 합 answer, 변경가능 횟수 K
